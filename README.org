@@ -1,0 +1,15 @@
+#+STARTUP: showall
+#+TITLE: Just a Test Page
+
+* Hello
+
+#+begin_src lisp :results silent :export none :tangle examples/hello.lisp
+  (eval-when (:compile-toplevel :load-toplevel :execute)
+    (ql:quickload "iup"))
+
+  (defpackage #:iup-examples.hello
+    (:use #:common-lisp)
+    (:export #:hello))
+
+  (in-package #:iup-examples.hello)
+#+end_src
